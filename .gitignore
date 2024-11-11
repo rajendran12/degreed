@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+cypress-combined-report.json
+
+API_KEY=your_api_key_here
+API_SECRET=your_secret_key_here
+
+# Dependency directories
+node_modules/
+jspm_packages/
+Test-Reports/
+cypress/reports/
+cypress/results/
+cypress/screenshots/
+cypress/vidoes/
+cypress/report/
+htmlreport/

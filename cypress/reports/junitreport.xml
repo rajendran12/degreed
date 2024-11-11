@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<testsuites failures="1" errors="0" tests="1">
+  <testsuite name="Root Suite" timestamp="2024-11-11T17:17:22" tests="0" file="cypress/integration/specs/github-api.spec.ts" time="0.0000" failures="0"/>
+  <testsuite name="GitHub API Test" timestamp="2024-11-11T17:17:22" tests="1" time="0.0000" failures="1">
+    <testcase name="GitHub API Test should fetch repositories for a user" time="0.0000" classname="should fetch repositories for a user">
+      <failure message="expected [ Array(5) ] to have property &apos;login&apos;" type="AssertionError"><![CDATA[AssertionError: expected [ Array(5) ] to have property 'login'
+    at eval (http://localhost:65350/__cypress/tests?p=cypress\integration\specs\github-api.spec.ts:115:47)
+    at Context.eval (http://localhost:65350/__cypress/tests?p=cypress\integration\specs\github-api.spec.ts:114:27)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
