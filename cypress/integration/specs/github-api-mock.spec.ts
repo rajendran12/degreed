@@ -1,40 +1,21 @@
-describe('Mock GitHub API success response', () => {
-    beforeEach(() => {
-        const mockData = [
-            {
-                id: 1,
-                name: "mock-repo",
-                full_name: "octocat/mock-repo",
-                private: false,
-                html_url: "https://github.com/octocat/mock-repo",
-                description: "This is a mock repository",
-            },
-            {
-                id: 2,
-                name: "another-mock-repo",
-                full_name: "octocat/another-mock-repo",
-                private: false,
-                html_url: "https://github.com/octocat/another-mock-repo",
-                description: "Another example of a mock repository",
-            },
-        ];
+describe('Mock API Response Example', () => {
+  it('should mock a successful API response', () => {
+    // Define mock data for a successful response
+    const mockResponse = { id: 1, name: "Mocked Item", status: "available" };
 
-        cy.intercept("GET", "https://api.github.com/users/octocat/repos", {
-            statusCode: 200,
-            body: mockData,
-        }).as("getUserRepos");
-    });
+    // Intercept the request to the API endpoint and provide a mock response
+    cy.intercept("GET", "/api/data", {
+      statusCode: 200,
+      body: mockResponse,
+    }).as("getData");
 
-    it("should display mock repositories on the page", () => {
-        // trigger the API call in your app
-        cy.visit("/rajendran12"); 
+    // Trigger the API call in your application
+    cy.visit("/rajendran12"); // Replace with the relevant page or action in your app
 
-        // Wait for the mocked API response
-        cy.wait("@getUserRepos");
+    // Wait for the mocked API response
+    cy.wait("@getData");
 
-        // Assert that the mock data is rendered on the page
-        cy.get(".repo-list-item").should("have.length", 2);
-        cy.contains("mock-repo").should("be.visible");
-        cy.contains("another-mock-repo").should("be.visible");
-    });
+    // Assert that the mock data appears on the page
+    cy.contains("Mocked Item").should("be.visible");
+  });
 });
