@@ -1,4 +1,5 @@
-Cypress GitHub API Testing Project
+**Cypress GitHub API Testing Project**
+
 This project demonstrates how to use Cypress for testing the GitHub API. It includes tests for verifying GitHub’s public endpoints, such as fetching user repositories, and mocking responses to simulate various scenarios. The setup uses best practices for securely handling sensitive data and integrates a customizable Cypress testing environment.
 
 Project Setup
