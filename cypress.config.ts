@@ -13,7 +13,16 @@
 // }
 
 const config = {
-    e2e: {
+    const dotenv = require('dotenv');
+    dotenv.config();
+
+    module.exports = {
+      env: {
+    apiKey: process.env.API_KEY,
+      },
+    };
+       e2e: {
+        
         supportFile: false, // Disable the support file
         // baseUrl: "https://www.github.com",
         specPattern: 'cypress/integration/specs/*.ts', // Look for .cy.js or .cy.ts files in cypress/e2e
