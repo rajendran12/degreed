@@ -26,8 +26,8 @@ describe('Mock GitHub API success response', () => {
     });
 
     it("should display mock repositories on the page", () => {
-        // Visit the page or trigger the API call in your app
-        cy.visit("/your-app-url"); // Replace with the correct URL or action in your app
+        // trigger the API call in your app
+        cy.visit("/rajendran12"); 
 
         // Wait for the mocked API response
         cy.wait("@getUserRepos");
